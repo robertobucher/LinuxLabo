@@ -55,7 +55,6 @@ Shv:
     		libqt5serialport5-dev \
     		libqt5websockets5-dev \
     		libqt5svg5-dev \
-		qcoro-qt5-dev \
 		liblua5.4-dev
 
 	git clone https://github.com/silicon-heaven/shvapp SHV/shvapp
