@@ -15,26 +15,26 @@ export PYSUPSICTRL=$(shell pwd)
 
 packages:
 	sudo apt-get install \
-    		gcc \
-    		gfortran \
-    		git \
-    		cmake \
-    		binutils \
-    		emacs \
-    		python3.9 \
-    		python3-numpy \
-    		python3-scipy \
-    		python3-sympy \
-    		python3-matplotlib \
-    		python3-pip \
-    		jupyter-qtconsole \
-    		python3-lxml \
-    		python3-pyqtgraph \
-    		libopenblas-dev \
-    		liblapack-dev \
-    		libxml2-dev \
-    		libcomedi-dev \
-    		python3-pyqt5
+		gcc \
+		gfortran \
+		git \
+		cmake \
+		binutils \
+		emacs \
+		python3.9 \
+		python3-numpy \
+		python3-scipy \
+		python3-sympy \
+		python3-matplotlib \
+		python3-pip \
+		jupyter-qtconsole \
+		python3-lxml \
+		python3-pyqtgraph \
+		libopenblas-dev \
+		liblapack-dev \
+		libxml2-dev \
+		libcomedi-dev \
+		python3-pyqt5
 
 pysimcoder:
 	git clone https://github.com/robertobucher/pysimCoder
@@ -50,11 +50,11 @@ Shv:
 
 	sudo apt-get install \
 		qtbase5-dev \
-    		qt5-qmake \
-    		libqt5webkit5-dev \
-    		libqt5serialport5-dev \
-    		libqt5websockets5-dev \
-    		libqt5svg5-dev \
+		qt5-qmake \
+		libqt5webkit5-dev \
+		libqt5serialport5-dev \
+		libqt5websockets5-dev \
+		libqt5svg5-dev \
 		liblua5.4-dev
 
 	git clone https://github.com/silicon-heaven/shvapp SHV/shvapp
@@ -66,10 +66,11 @@ Shv:
 
 nuttx:
 	sudo apt-get install \
+		tio \
 		kconfig-frontends \
 		openocd  \
-  		binutils-arm-none-eabi \
-  		gcc-arm-none-eabi
+		binutils-arm-none-eabi \
+		gcc-arm-none-eabi
 
 	mkdir NUTTX
 	git clone --branch mydev https://github.com/robertobucher/incubator-nuttx NUTTX/nuttx
