@@ -62,7 +62,7 @@ Shv:
 	cd SHV/shvapp; git submodule update --init --recursive
 	cd SHV/shvspy; git submodule update --init --recursive
 	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
-	cd SHV/shvspy; qmake -r; make
+	cd SHV/shvspy; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
 
 nuttx:
 	sudo apt-get install \
