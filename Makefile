@@ -46,7 +46,7 @@ pysimcoder:
 	cd pysimCoder; make user; make alias
 
 Shv:
-	mkdir SHV
+	mkdir -p SHV
 
 	sudo apt-get install \
 		qtbase5-dev \
@@ -72,7 +72,7 @@ nuttx:
 		binutils-arm-none-eabi \
 		gcc-arm-none-eabi
 
-	mkdir NUTTX
+	mkdir -p NUTTX
 	git clone --branch mydev https://github.com/robertobucher/incubator-nuttx NUTTX/nuttx
 	git clone https://github.com/apache/incubator-nuttx-apps NUTTX/apps
 
