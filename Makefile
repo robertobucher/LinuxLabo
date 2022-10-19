@@ -37,6 +37,7 @@ packages:
 		python3-pyqt5
 
 pysimcoder:
+	sudo rm -rf pysimCoder
 	git clone https://github.com/robertobucher/pysimCoder
 	cd pysimCoder; sudo make addfiles
 	cd pysimCoder; sudo make modules
@@ -46,6 +47,7 @@ pysimcoder:
 	cd pysimCoder; make user; make alias
 
 Shv:
+	sudo rm -rf SHV
 	mkdir -p SHV
 
 	sudo apt-get install \
@@ -72,6 +74,7 @@ nuttx:
 		binutils-arm-none-eabi \
 		gcc-arm-none-eabi
 
+	sudo rm -rf NUTTX
 	mkdir -p NUTTX
 	git clone --branch mydev https://github.com/robertobucher/incubator-nuttx NUTTX/nuttx
 	git clone https://github.com/apache/incubator-nuttx-apps NUTTX/apps
@@ -79,3 +82,5 @@ nuttx:
 f7:
 	cd NUTTX/nuttx; make distclean
 	cd NUTTX/nuttx; ./tools/configure.sh nucleo-144:f746-pysim; make; make export
+	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-0.0.0.tar.gz; \
+	mv nuttx-export-0.0.0 nuttx-export

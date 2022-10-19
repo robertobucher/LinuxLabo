@@ -58,12 +58,12 @@ $ make nuttx
 $ make f7
 ```
 
-The last command creates a tar.gz file in the NUTTX/nuttx folder.
+The last command creates a tar.gz file in the NUTTX/nuttx folder and move the nuttx-export folder under 
+pysimCoder/CodeGen/nuttx.
+
+This last command set SHV for the nuttx F/ environment.
 
 ```
-$ cd pysimCoder/CodeGen/nuttx
-$ tar xvfz ~/Develop/NUTTX(nuttx/nuttx-export-0.0.0.tar.gz
-$ mv nuttx-export-0.0.0 nuttx-export
 $ cd devices
 $ make SHV=1
 ```
