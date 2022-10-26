@@ -21,7 +21,7 @@ packages:
 		cmake \
 		binutils \
 		emacs \
-		python3.9 \
+		python3 \
 		python3-numpy \
 		python3-scipy \
 		python3-sympy \
@@ -76,7 +76,7 @@ nuttx:
 
 	sudo rm -rf NUTTX
 	mkdir -p NUTTX
-	git clone --branch mydev https://github.com/robertobucher/incubator-nuttx NUTTX/nuttx
+	git clone https://github.com/apache/incubator-nuttx.git NUTTX/nuttx
 	git clone https://github.com/apache/incubator-nuttx-apps NUTTX/apps
 
 f7:
