@@ -1,4 +1,4 @@
-all: folders packages pysimcoder shv nuttx f7
+all: packages pysimcoder shv nuttx f7
 
 # Install sudo
 # /usr/sbin/addgroup <user> sudo
@@ -82,5 +82,5 @@ nuttx:
 f7:
 	cd NUTTX/nuttx; make distclean
 	cd NUTTX/nuttx; ./tools/configure.sh nucleo-144:f746-pysim; make; make export
-	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-0.0.0.tar.gz; \
+	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-11.0.0.tar.gz; \
 	mv nuttx-export-11.0.0 nuttx-export
