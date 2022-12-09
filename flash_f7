@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+INSTALL_DIR=/usr
+OPENOCD_DIR=$INSTALL_DIR/share/openocd/scripts
+FLASH=$INSTALL_DIR/bin/openocd
+
+FLASH_FLAGS="-f $OPENOCD_DIR/interface/stlink.cfg -f $OPENOCD_DIR/target/stm32f7x.cfg"
+
+$FLASH $FLASH_FLAGS -c "program $1 verify reset exit"

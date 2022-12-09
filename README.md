@@ -68,6 +68,22 @@ $ cd devices
 $ make SHV=1
 ```
 
+## Additional scripts
+
+There are 2 scipts that can be copied under /usr/local/bin which can be used to handle some operations:
+
+  * shv can be used to launch the Silicon Heaven programs to interact with the RT application and change parameters on the fly during the execution
+  * flash_f7 that can be used to flash the generated code for the nucleo-F746ZG board
+
+The shv applcation must be fitted with the name of the folder where the 2 gits are installed!
+
+It is important to set the right user and passwor in the shvspy window. Smply open the application and with the rigt mouse button, select the server (usually "test") and in the pull-down menu click on "Server properties.
+
+Set the two fields:
+
+  * user: admin
+  * password: admin!123
+
 
 
 
