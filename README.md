@@ -72,8 +72,8 @@ $ make SHV=1
 
 There are 2 scipts that can be copied under /usr/local/bin which can be used to handle some operations:
 
-  * shv can be used to launch the Silicon Heaven programs to interact with the RT application and change parameters on the fly during the execution
-  * flash_f7 that can be used to flash the generated code for the nucleo-F746ZG board
+  * **shv** can be used to launch the Silicon Heaven programs to interact with the RT application and change parameters on the fly during the execution
+  * **flash_f7** that can be used to flash the generated code for the nucleo-F746ZG board
 
 The shv applcation must be fitted with the name of the folder where the 2 gits are installed!
 
