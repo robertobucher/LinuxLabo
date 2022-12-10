@@ -34,7 +34,9 @@ packages:
 		liblapack-dev \
 		libxml2-dev \
 		libcomedi-dev \
-		python3-pyqt5
+		python3-pyqt5 \
+		python3-qwt \
+		python3-serial
 
 pysimcoder:
 	sudo rm -rf pysimCoder
