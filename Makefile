@@ -59,14 +59,15 @@ Shv:
 		libqt5serialport5-dev \
 		libqt5websockets5-dev \
 		libqt5svg5-dev \
-		liblua5.4-dev
+		liblua5.4-dev \
+		doctest-dev
 
 	git clone https://github.com/silicon-heaven/shvapp SHV/shvapp
 	git clone https://github.com/silicon-heaven/shvspy SHV/shvspy
 	cd SHV/shvapp; git submodule update --init --recursive
 	cd SHV/shvspy; git submodule update --init --recursive
 	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
-	cd SHV/shvspy; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
+	cd SHV/shvspy; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=..  -DUSE_QT6=OFF ..; make; make install
 
 nuttx:
 	sudo apt-get install \
@@ -78,11 +79,11 @@ nuttx:
 
 	sudo rm -rf NUTTX
 	mkdir -p NUTTX
-	git clone https://github.com/apache/incubator-nuttx.git NUTTX/nuttx
-	git clone https://github.com/apache/incubator-nuttx-apps NUTTX/apps
+	git clone https://github.com/apache/nuttx.git NUTTX/nuttx
+	git clone https://github.com/apache/nuttx-apps NUTTX/apps
 
 f7:
 	cd NUTTX/nuttx; make distclean
 	cd NUTTX/nuttx; ./tools/configure.sh nucleo-144:f746-pysim; make; make export
-	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-11.0.0.tar.gz; \
-	mv nuttx-export-11.0.0 nuttx-export
+	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-12.0.0.tar.gz; \
+	mv nuttx-export-12.0.0 nuttx-export
