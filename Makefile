@@ -66,7 +66,7 @@ Shv:
 	git clone https://github.com/silicon-heaven/shvspy SHV/shvspy
 	cd SHV/shvapp; git submodule update --init --recursive
 	cd SHV/shvspy; git submodule update --init --recursive
-	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
+	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=..  -DUSE_QT6=OFF ..; make; make install
 	cd SHV/shvspy; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=..  -DUSE_QT6=OFF ..; make; make install
 
 nuttx:
