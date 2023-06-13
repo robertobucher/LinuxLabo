@@ -85,5 +85,5 @@ nuttx:
 f7:
 	cd NUTTX/nuttx; make distclean
 	cd NUTTX/nuttx; ./tools/configure.sh nucleo-144:f746-pysim; make; make export
-	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-12.0.0.tar.gz; \
-	mv nuttx-export-12.0.0 nuttx-export
+	cd pysimCoder/CodeGen/nuttx; tar xvfz ../../../NUTTX/nuttx/nuttx-export-12.1.0.tar.gz; \
+	mv nuttx-export-12.1.0 nuttx-export
