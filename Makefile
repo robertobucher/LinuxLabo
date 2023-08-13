@@ -36,7 +36,8 @@ packages:
 		libcomedi-dev \
 		python3-pyqt5 \
 		python3-qwt \
-		python3-serial
+		python3-serial \
+		qt6-svg-dev
 
 pysimcoder:
 	sudo rm -rf pysimCoder
