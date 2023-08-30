@@ -42,12 +42,13 @@ packages:
 pysimcoder:
 	sudo rm -rf pysimCoder
 	git clone https://github.com/robertobucher/pysimCoder
-	cd pysimCoder; sudo make addfiles
-	cd pysimCoder; sudo make modules
-	cd pysimCoder; sudo make fmu
-	cd pysimCoder; sudo make driver
+	cd pysimCoder; make addfiles
+	cd pysimCoder; make modules
+	cd pysimCoder; make full_lib
+	cd pysimCoder; make fmu
 	cd pysimCoder; sudo make link
 	cd pysimCoder; make user; make alias
+	cd pysimCoder; sudo make driver
 
 Shv:
 	sudo rm -rf SHV
