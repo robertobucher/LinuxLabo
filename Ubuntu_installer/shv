@@ -1,0 +1,12 @@
+#!/bin/bash
+
+INSTALL_DIR=$HOME/Develop/SHV
+
+cd $INSTALL_DIR/shvapp/bin
+LD_LIBRARY_PATH=../lib/ ./shvbroker  --config-dir ../shvbroker/etc/shv/shvbroker -v rpcmsg &
+
+cd $INSTALL_DIR/shvspy/bin
+LD_LIBRARY_PATH=../lib/ ./shvspy -v rpcmsg 
+
+killall shvbroker
+
