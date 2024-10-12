@@ -51,6 +51,7 @@ pysimcoder:
 	pip install slycot
 	pip uninstall numpy
 	sudo apt-get install python3-numpy
+	pip install pyshv
 
 	sudo rm -rf pysimCoder
 	git clone https://github.com/robertobucher/pysimCoder
