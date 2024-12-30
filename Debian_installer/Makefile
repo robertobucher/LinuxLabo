@@ -79,8 +79,13 @@ Shv:
 	git clone https://github.com/silicon-heaven/shvspy SHV/shvspy
 	cd SHV/shvapp; git submodule update --init --recursive
 	cd SHV/shvspy; git submodule update --init --recursive
-	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=..  -DSHVSPY_USE_QT6=OFF ..; make; make install
-	cd SHV/shvspy; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=..  -DSHVSPY_USE_QT6=OFF ..; make; make install
+# For Qt5 uncomment the following two lines and comment the other two for Qt6
+#	cd SHV/shvapp; mkdir build;cd build; cmake  -DSHVSPY_USE_QT6=OFF -DLIBSHV_USE_QT6=OFF -DCMAKE_INSTALL_PREFIX=.. ..; make -j6; make install
+#	cd SHV/shvspy; mkdir build;cd build; cmake  -DSHV_USE_QT6=OFF -DLIBSHV_USE_QT6=OFF -DSHVSPY_USE_QT6=OFF -DCMAKE_INSTALL_PREFIX=.. ..; make -j6; make install
+
+# For Qt6
+	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
+	cd SHV/shvspy; mkdir build;cd build; cmake -DDCMAKE_INSTALL_PREFIX=.. ..; make; make install
 	sudo cp shv /usr/local/bin
 
 nuttx:
