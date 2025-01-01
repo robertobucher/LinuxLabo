@@ -73,6 +73,7 @@ Shv:
 		libqt5svg5-dev \
 		liblua5.4-dev \
 		qttools5-dev \
+		qt6-websockets-dev \
 		doctest-dev
 
 	git clone https://github.com/silicon-heaven/shvapp SHV/shvapp
@@ -85,7 +86,7 @@ Shv:
 
 # For Qt6
 	cd SHV/shvapp; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
-	cd SHV/shvspy; mkdir build;cd build; cmake -DDCMAKE_INSTALL_PREFIX=.. ..; make; make install
+	cd SHV/shvspy; mkdir build;cd build; cmake -DCMAKE_INSTALL_PREFIX=.. ..; make; make install
 	sudo cp shv /usr/local/bin
 
 nuttx:

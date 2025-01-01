@@ -77,6 +77,7 @@ Shv:
 		libqt5websockets5-dev \
 		libqt5svg5-dev \
 		liblua5.4-dev \
+		qt6-websockets-dev \
 		doctest-dev
 
 	git clone https://github.com/silicon-heaven/shvapp SHV/shvapp
